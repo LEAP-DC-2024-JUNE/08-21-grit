@@ -1,0 +1,38 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 100px 100px 100px;
+  gap: 20px;
+  background-color: white;
+  color: black;
+}
+.grid-item{
+  text-align: center;
+}
+.bg-blue{
+  background-color: blue;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-white{
+  background-color: aliceblue;
+}
+.bg-yellow{
+  background-color: yellow;
+}
+.bg-purple{
+  background-color: purple;
+}
+.bg-green{
+  background-color: green;
+}
+.bg-orange{
+  background-color: orange;
+}
+.bg-beige{
+  background-color: burlywood;
+}
+.bg-brown{
+  background-color: brown;
+}

@@ -1,0 +1,62 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  gap: 10px;
+  text-align: center;
+}
+div{
+  height: 100px;
+}
+.row-one{
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+.row-two{
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+.row-three{
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+.red{
+  background-color: red;
+}
+.orange{
+  margin-top: 10px;
+  background-color: orange;
+}
+.yellow{
+  margin-top: 10px;
+  background-color: yellow;
+}
+.green{
+  background-color: green;
+}
+.blue{
+  margin-top: 10px;
+  background-color: blue;
+}
+.indigo{
+  margin-top: 10px;
+  background-color: indigo;
+}
+.violet{
+  background-color: violet;
+}
+.beige{
+  margin-top: 10px;
+  background-color: beige;
+}
+.brown{
+  margin-top: 10px;
+  background-color: brown;
+}
