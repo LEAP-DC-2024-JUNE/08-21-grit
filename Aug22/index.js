@@ -1,7 +1,7 @@
 // const array = [1,2,3,4,5];
 // let result = [];
 // 1. elementeern araas ni guine
-// 2. shine array 
+// 2. shine array
 // 3. shine array ruu neg negeer ni urvuulj gargsn toonuudaa oruulna
 
 // for(let index = array.lenght -1; index >= 0; i--){
@@ -24,9 +24,20 @@
 // //array.pop();
 // console.log(array);
 
-var greeting = "hey hi";
-var count = 4;
-if (count > 3) {
-  var greeting = " say Hello instead";
+// var greeting = "hey hi";
+// var count = 4;
+// if (count > 3) {
+//   var greeting = " say Hello instead";
+// }
+// console.log(greeting);
+
+let num = 2;
+let result = 0;
+let pow;
+for (pow = 0; pow < Infinity; pow++) {
+  result = num ** pow;
+  if (result > 1000) {
+    console.log(`${num}iin ${pow} zereg ni 1000 aas ih baina : ${result}`);
+    break;
+  }
 }
-console.log(greeting);
