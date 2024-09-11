@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 
 const Card = (props) => {
   const { title, description, imgSrc, reverse } = props;
@@ -25,13 +25,13 @@ const Card = (props) => {
   }
   return (
     <div className="w-[1152px] h-[480px]">
-      <div className="flex ">
+      <div className="flex gap-16 ">
         <div className=" flex mt-24">
           {<Image src={imgSrc} width={440} height={520} />}
         </div>
-        <div className=" text-center w-[600px] h-[364px] gap-[48px] opacity-100 flex flex-col pl-24 pt-24">
+        <div className=" text-center w-[600px] h-[364px] opacity-100 flex flex-col pl-24 pt-24">
           <div className="font-bold">{title}</div>
-          <div>{description}</div>
+          <div className="text-center w-[600px] h-[364px]">{description}</div>
         </div>
       </div>
     </div>

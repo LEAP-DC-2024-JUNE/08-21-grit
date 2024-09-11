@@ -7,23 +7,23 @@ import IconLinks from "../Icons/Links.png";
 
 const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center p-4 space-y-4 flex-1 justify-between ">
-      <div className="text-center w-[600px] h-[364px] gap-[48px] opacity-100 flex flex-col pl-24">
+    <div className="flex flex-row items-center pt-16 ">
+      <div className="text-center w-[600px] h-[364px] gap-[20px] opacity-100 flex flex-col pl-24 pt-4 ml-16 mr-60">
         <h2 className="text-3xl font-bold pt-12 leading-relaxed">
           Hi, I'm Suvdaa
         </h2>
         <p className="text-gray-700 ">
-          I specialize in full stack development, particularly with React.js and
-          // Node.js. My main goal is to create exceptional digital experiences
-          // that are fast, visually appealing, and accessible to everyone. With
-          // over 7 years of experience in web development, I continue to find
-          joy // in crafting innovative solutions and designs.
+          I specialize in full stack development, with a strong focus on
+          React.js and Next.js. My main goal is to create exceptional digital
+          experiences that are fast, visually appealing, and accessible to
+          everyone. I find joy in crafting innovative solutions and designs that
+          stand out and deliver real value.
         </p>
         <div>
           <div className="flex align ">
             {" "}
             <Image src={IconLoc} width={24} height={24} />
-            <p> Ulaanbaatar, Mongolia</p>
+            <p> Arlington, Virginia</p>
           </div>
           <div className="flex align">
             {" "}
@@ -35,12 +35,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="flex  pl-40 pr-40 w-150 h-91 pt-20">
+      <div className="flex mt-16 ">
         <Image
+          className="rounded-sm shadow-sm"
           src={Pic1}
           alt="A descriptive alt text" // Always include alt text
-          width={320} // Set the width of the image
-          height={360} // Set the height of the image
+          width={400} // Set the width of the image
+          height={480} // Set the height of the image
           layout="intrinsic"
         />
       </div>

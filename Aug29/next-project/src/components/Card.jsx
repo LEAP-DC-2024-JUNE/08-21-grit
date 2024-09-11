@@ -1,46 +1,28 @@
 import Image from "next/image";
-import { Button } from "./Button";
+import UbCab from "../Icons/Ubcab.png";
 
 const Card = (props) => {
-  const { title, description, imgSrc, reverse } = props;
   // const props = { title: "work", description: "black" };
   // console.log(props.description);
-  if (reverse === true) {
-    return (
-      <div className="w-[1152px] h-[480px]">
-        <div className="flex flex-row-reverse ">
-          <div className=" flex mt-24">
-            {<Image src={imgSrc} width={440} height={520} />}
-          </div>
-          <div className=" text-center w-[600px] h-[364px] gap-[48px] opacity-100 flex flex-col pl-24 pt-24">
-            <div className="font-bold">{title}</div>
-            <div className="pr-24">{description}</div>
-          </div>
-        </div>
-        {/* {buttons.map((button) => {
-          return <Button button={button} />;
-        })} */}
-      </div>
-    );
-  }
   return (
-    <div className="w-[1152px] h-[480px]">
-      <div className="flex ">
+    <div className="flex">
+      <div className=" flex">
+        <button className="w-28 h-8 rounded-2xl bg-slate-300 font-normal text-black">
+          {props.title}
+        </button>
+      </div>
+      <div className="flex">
         <div className=" flex mt-24">
-          {<Image src={imgSrc} width={440} height={520} />}
+          <Image src={UbCab} width={440} height={520} />
         </div>
-        <div className=" text-center w-[600px] h-[364px] gap-[48px] opacity-100 flex flex-col pl-24 pt-24">
-          <div className="font-bold">{title}</div>
-          <div>{description}</div>
+        <div className=" text-center w-[600px] h-[364px] gap-[48px] opacity-100 flex flex-col pl-24">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec
+          urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae.
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Card;
-
-/* <div>
+      <div>
+        <p className="flex justify-center">UBCab</p>
         <div className=" flex justify-center ">
           <button className="w-36 h-9 rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-[#111827] font-medium text-white  ">
             React
@@ -73,4 +55,11 @@ export default Card;
             Git
           </button>
         </div>
-      </div> */
+      </div>
+
+      <div></div>
+    </div>
+  );
+};
+
+export default Card;

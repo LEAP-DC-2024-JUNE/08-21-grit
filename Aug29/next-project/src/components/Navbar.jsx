@@ -18,8 +18,8 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div>
-          <ul className="hidden sm:flex">
+        <div className="ml-80">
+          <ul className="flex">
             <li className=" ml-10 hover:borderb text-pretty">About</li>
             <li className=" ml-10 hover:borderb text-pretty">Work</li>
             <li className=" ml-10 hover:borderb text-pretty">Testimonials</li>
