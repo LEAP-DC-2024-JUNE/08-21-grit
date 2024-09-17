@@ -3,13 +3,13 @@ import LogoUp from "../Icons/logoUpwork.png";
 
 const Experience = () => {
   return (
-    <div className=" h-[400px] items-center  mt-16 bg-slate-100">
+    <div className=" md:h-[400px] md:items-center  mt-16 md:bg-slate-100">
       <div className=" flex justify-center ">
         <button className="w-28 h-8 rounded-2xl mt-8 bg-slate-300 font-normal text-black text-center">
           Experience
         </button>
       </div>
-      <div>
+      <section>
         <div className="text-center pt-6">
           <p>Here is a quick summary of my most recent experiences:</p>
         </div>
@@ -30,7 +30,7 @@ const Experience = () => {
             <p>Nov 2021 - Present</p>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

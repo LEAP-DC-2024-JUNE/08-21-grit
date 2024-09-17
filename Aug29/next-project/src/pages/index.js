@@ -5,10 +5,11 @@ import About from "../components/About";
 import Work from "../components/Work";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import { useTheme } from "next-themes";
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
+    <div>
       <Navbar />
       <Header />
       <About />
@@ -16,10 +17,24 @@ export default function Home() {
       <Experience />
       <Work />
       <Contact />
-    </>
+    </div>
   );
-}
+};
 
+// export default function Home() {
+//   return (
+//     <>
+//       <Navbar />
+//       <Header />
+//       <About />
+//       <Skills />
+//       <Experience />
+//       <Work />
+//       <Contact />
+//     </>
+//   );
+// }
+export default Home;
 // const arr = [1, 5, 3, 4, 100];
 
 // let sum = 0;
