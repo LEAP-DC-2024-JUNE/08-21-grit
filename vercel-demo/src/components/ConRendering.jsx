@@ -52,4 +52,6 @@ const Glasses = () => {
 //   •  Accept an array prop items.
 //   •  Conditionally render the list or a “No items” message based on whether the array is empty.
 
-export default ConRendering;
+// export default ConRendering;
+
+export default Glasses;
