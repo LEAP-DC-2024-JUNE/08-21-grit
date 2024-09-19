@@ -3,13 +3,58 @@ import localFont from "next/font/local";
 import Glasses from "../components/Glasses";
 import ConRendering from "../components/ConRendering";
 
-export default function Home() {
-  return (
-    <div>
-      <Glasses />
-    </div>
-  );
-}
+// export default function Home() {
+//   return (
+//     <div>
+//       <Glasses />
+//     </div>
+//   );
+// }
+
+// export default function Home() {
+//   const [age, setAge] = useState(18);
+//   [
+//     {
+//       name: "Suvd",
+//       age: 18,
+//     },
+//     {
+//       name: "Alungoo",
+//       age: 17,
+//     },
+//     {
+//       name: "Dul",
+//       age: 19,
+//     },
+//   ];
+// }
+// const filteredArray = array.filter((element) => {
+//   return element.age >= age;
+// });
+// const handleClick = () => {
+//   setAge(0);
+// };
+// const handleClickAdult = () => {
+//   setAge(18);
+// };
+// return (
+//   <div>
+//     <h1>Nasand hursen humuus</h1>
+//     <button className="bg-slate-300" onClick={handleClickAdult}>
+//       18 aas deesh nasniih
+//     </button>
+//     <div>
+//       {filteredArray.map((person) => {
+//         return (
+//           <div>
+//             <p>{person.name}</p>
+//             <span>{person.age}</span>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   </div>
+// );
 
 // export const LoginStatus = ({ isLoggedIn }) => {
 //   if (isLoggedIn) {

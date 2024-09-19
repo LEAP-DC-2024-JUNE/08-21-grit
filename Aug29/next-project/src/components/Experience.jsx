@@ -9,7 +9,7 @@ const Experience = () => {
           Experience
         </button>
       </div>
-      <section>
+      {/* <section>
         <div className="text-center pt-6">
           <p>Here is a quick summary of my most recent experiences:</p>
         </div>
@@ -30,7 +30,7 @@ const Experience = () => {
             <p>Nov 2021 - Present</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

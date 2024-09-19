@@ -22,7 +22,7 @@ const Skills = () => {
           The skills, tools and technologies I am really good at:
         </p>
       </div>
-      {/* <section className=" grid grid-cols-3 gap-8 justify-center items-center mt-16">
+      <section className=" grid grid-cols-3 gap-8 justify-center items-center mt-16">
         <div>
           <div className="flex flex-col items-center">
             <Image src={Html} width={64} height={64} />
@@ -61,7 +61,7 @@ const Skills = () => {
             <p>git</p>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
