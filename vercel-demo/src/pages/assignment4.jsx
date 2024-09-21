@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Assignment4 = () => {
   const products = [
     {
@@ -17,19 +19,39 @@ const Assignment4 = () => {
     },
   ];
 
-  const availableProducts = products.filter((product) => {
-    return product.available == true;
+  const [availableProduct, setAvailableProduct] = useState(true);
+
+  const filteredAvailable = products.filter((element) => {
+    return element.available == availableProduct;
   });
+  const handleClick = (param1) => {
+    setAvailableProduct(param1);
+  };
 
   return (
-    <div>
-      <h1>Filter Products by Availability</h1>
-      <button>Idevhitei baraa</button>
-      <button>Duussan baraa</button>
+    <div className="p-10 gap-4">
+      <h1
+        className="font-bold text-xl
+      "
+      >
+        Filter Products by Availability
+      </h1>
+      <button
+        className="border-2 border-blue-300 p-1 m-2 w-[120px] cursor-pointer hover:bg-blue-300 "
+        onClick={() => handleClick(true)}
+      >
+        Available
+      </button>
+      <button
+        className="border-2 border-blue-300 p-1 m-2 w-[120px] cursor-pointer hover:bg-blue-300 "
+        onClick={() => handleClick(false)}
+      >
+        Not Available
+      </button>
       <div>
-        {availableProducts.map((product) => {
+        {filteredAvailable.map((product, index) => {
           return (
-            <div>
+            <div key={index}>
               <p>{product.name}</p>
               <span>{product.price}</span>
             </div>

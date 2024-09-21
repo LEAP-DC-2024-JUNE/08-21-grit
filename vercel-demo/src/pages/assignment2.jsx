@@ -29,32 +29,37 @@ const Assignment2 = () => {
     setValue(param1);
   };
   return (
-    <div>
-      <div>Filter Strings by Length</div>
+    <div className="p-10 gap-4">
+      <div
+        className="font-bold text-xl
+      "
+      >
+        Filter Strings by Length
+      </div>
 
       <button
-        className="border-2 bg-white"
+        className="border-2 border-blue-300 p-1 m-2 w-8 cursor-pointer hover:bg-blue-300 "
         onClick={() => handleChangeValue(4)}
       >
         4
       </button>
 
       <button
-        className="border-2 bg-white"
+        className="border-2 border-blue-300 p-1 m-2 w-8 cursor-pointer hover:bg-blue-300 "
         onClick={() => handleChangeValue(2)}
       >
         2
       </button>
 
       <button
-        className="border-2 bg-white"
+        className="border-2 border-blue-300 p-1 m-2 w-8 cursor-pointer hover:bg-blue-300 "
         onClick={() => handleChangeValue(5)}
       >
         5
       </button>
 
-      {filteredArray.map((element) => {
-        return <p>{element}</p>;
+      {filteredArray.map((element, index) => {
+        return <p key={index}>{element}</p>;
       })}
     </div>
   );
