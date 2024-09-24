@@ -1,11 +1,13 @@
 import Pic from "../../public/pic/Pic2.png";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const About = () => {
+  const { setTheme, theme } = useTheme();
   return (
-    <div>
+    <div className="dark:bg-[#1F2937] bg-gray-50">
       <div className=" flex flex-col items-center ">
-        <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center ">
+        <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center mt-2 dark:bg-[#374151] ">
           About me
         </button>
       </div>
@@ -22,10 +24,10 @@ const About = () => {
         </div>
 
         <div className="md:pr-[32px]">
-          <p className="text-3xl text-[#111827] font-bold mb-2">
+          <p className="text-3xl dark:text-white text-[#111827] font-bold mb-2">
             Curious about me? Here you have it:
           </p>
-          <p className="text-gray-700 gap-[8px]">
+          <p className="text-gray-700 gap-[8px] dark:text-white">
             I'm a full stack developer with a passion for React.js and Node.js.
             I specialize in using HTML, CSS, React.js, and Next.js to create
             exceptional digital experiences.By leveraging Tailwind CSS and
@@ -34,7 +36,7 @@ const About = () => {
             development journey in 2021, I’ve embraced new challenges and kept
             up with the latest tech trends.
           </p>
-          <p className="text-[#4B5563]">
+          <p className="text-[#4B5563] dark:text-white">
             I’m available for freelance work, so feel free to reach out and say
             hello! I promise I don’t bite.😉
           </p>

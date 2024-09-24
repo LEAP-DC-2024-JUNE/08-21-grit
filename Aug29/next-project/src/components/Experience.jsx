@@ -1,36 +1,76 @@
 import Image from "next/image";
-import LogoUp from "../Icons/logoUpwork.png";
+import LogoE from "../Icons/logoUpwork.png";
+import Card2 from "../components/CardExperience";
+import { useTheme } from "next-themes";
+
+// import Upwork from "../svg/Logo-Upwork";
 
 const Experience = () => {
+  const { setTheme, theme } = useTheme();
   return (
-    <div className=" md:h-[400px] md:items-center  mt-16 md:bg-slate-100">
-      <div className=" flex justify-center ">
-        <button className="w-28 h-8 rounded-2xl mt-8 bg-slate-300 font-normal text-black text-center">
+    <div className="w-full px-[16px] py-[64px] lg:py-[96px] lg:px-[80px] lg:justify-center bg-[#F9FAFB] dark:bg-[#111827] dark:text-white">
+      <div className=" flex flex-col gap-[24px] lg:gap-[48px] lg:px-[32px] items-center ">
+        <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] font-normal text-black text-center dark:bg-[#374151] ">
           Experience
         </button>
-      </div>
-      {/* <section>
-        <div className="text-center pt-6">
+        <div className="text-center mb-4">
           <p>Here is a quick summary of my most recent experiences:</p>
         </div>
-        <div className="flex h-[180px] gap-12 pb-0 mb-4 ml-28 mt-8 bg-white mr-28 items-center justify-center">
-          <div>
-            <Image src={LogoUp} width={102} height={28} />
-          </div>
-          <div>
-            <h2>Sr. Frontend Developer</h2>
+      </div>
+
+      <section className="space-y-8 dark:bg-[#111827]">
+        <Card2
+          img
+          src={LogoE}
+          title="Sr. Frontend Developer"
+          description={[
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+
             <div>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-              <li>Ut pretium arcu et massa semper, id fringilla leo semper.</li>
-              <li>Sed quis justo ac magna.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            </div>
-          </div>
-          <div>
-            <p>Nov 2021 - Present</p>
-          </div>
-        </div>
-      </section> */}
+              Ut pretium arcu et massa semper, id fringilla leo semper.
+            </div>,
+
+            <div>Sed quis justo ac magna.</div>,
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+          ]}
+          time="Nov 2021 - Present"
+        />
+        <Card2
+          img
+          src={LogoE}
+          title="Team Lead"
+          description={[
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+
+            <div>
+              Ut pretium arcu et massa semper, id fringilla leo semper.
+            </div>,
+
+            <div>Sed quis justo ac magna.</div>,
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+          ]}
+          time="Nov 2021 - Present"
+        />
+        <Card2
+          img
+          src={LogoE}
+          title="Full Stack Developer"
+          description={[
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+
+            <div>
+              Ut pretium arcu et massa semper, id fringilla leo semper.
+            </div>,
+
+            <div>Sed quis justo ac magna.</div>,
+
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>,
+          ]}
+          time="Nov 2021 - Present"
+        />
+      </section>
     </div>
   );
 };

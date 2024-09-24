@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Card from "./CardWork";
 import Ubcab from "../Icons/Ubcab.png";
 import Mentorhub from "../Icons/Mentorhub.png";
@@ -6,10 +7,10 @@ import iToim from "../Icons/iToim.png";
 const Work = () => {
   return (
     <div>
-      <div className="w-[1280px]">
-        <div className="mt-8">
-          <div className=" text-center">
-            <button className="w-28 h-8 rounded-2xl bg-slate-300 font-normal text-black">
+      <div className="w-full px-20 py-24 bg-gray">
+        <div className="px-8 flex flex-col gap-12">
+          <div className="flex flex-col">
+            <button className="w-28 h-8 rounded-2xl bg-slate-300 font-normal text-black dark:bg-[#374151]">
               Work
             </button>
           </div>

@@ -1,64 +1,154 @@
 import Image from "next/image";
-import Html from "../Icons/logo-html.png";
-import Css from "../Icons/css.png";
-import Js from "../Icons/Tech.png";
-import React from "../Icons/React.png";
-import Next from "../Icons/next.png";
-import Tailwind from "../Icons/Tailwind.png";
-import Figma from "../Icons/icon-figma.png";
-import Firebase from "../Icons/firebase.png";
-import Git from "../Icons/icon-git.png";
+import Javascript from "../svg/Icon-Javscript";
+import Typescript from "../svg/Icon-Typescript";
+import React from "../svg/Icon-React";
+import Next from "../Icons/Icon-Nextjs.png";
+import Node from "../svg/Icon-Nodejs";
+import Express from "../svg/Icon-Express";
+import DarkExpress from "../svg/Icon-Dark-Express";
+import { useTheme } from "next-themes";
+import Nest from "../svg/Icon-Nest";
+import DarkSocket from "../svg/Icon-Dark-Socket";
+import Socket from "../svg/Icon-Socket";
+import Postgresql from "../Icons/Icon-Postgresql.png";
+import MongoDB from "../svg/Icon-Mongodb";
+import Sass from "../svg/Icon-Sass";
+import Tailwind from "../Icons/Icon-Tailwindcss.png";
+import Figma from "../svg/Icon-Figma";
+import Cypress from "../svg/Icon-Cypress";
+import DarkCypress from "../svg/Icon-Dark-Cypress";
+import Storybook from "../svg/Icon-Storybook";
+import Git from "../svg/Icon-Git";
 
 const Skills = () => {
+  const { theme } = useTheme();
   return (
-    <div className=" w-[375px] h-[500px] justify-between px-[64px] py-[16px]  items-center	lg:container lg:px-[96px] lg:py-[80px] ">
-      <div className=" flex flex-col items-center">
+    <div className=" w-full px-[16px] py-[64px]  lg:px-[80px] lg:py:[96px]  bg-[#ffffff] flex flex-col gap-[3px] dark:bg-[#030712] ">
+      <div>
         <div className=" flex flex-col items-center ">
-          <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center ">
+          <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center dark:bg-[#374151]">
             Skills
           </button>
         </div>
-        <p className="mt-6">
+        <p className="mt-6 mb-12 text-center">
           The skills, tools and technologies I am really good at:
         </p>
       </div>
-      <section className=" grid grid-cols-3 gap-8 justify-center items-center mt-16">
-        <div>
-          <div className="flex flex-col items-center">
-            <Image src={Html} width={64} height={64} />
+
+      <section className=" flex flex-col gap-[16px] lg:flex lg:flex-col lg:gap-[48px]">
+        <div className="grid grid-cols-3 gap-[48px] lg:grid-cols-[32px] lg:flex lg:gap-[102px] ">
+          <div className="flex flex-col gap-[8px] items-center">
+            <Javascript />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Javascript
+            </p>
           </div>
-          <div className="flex flex-col items-center">
-            <Image src={Css} width={64} height={64} />
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Typescript />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Javascript
+            </p>
           </div>
-          <div className="flex flex-col items-center">
-            <Image src={Js} width={64} height={64} />
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <React />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              React
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Image src={Next} />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Next.js
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Node />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Node.js
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            {theme == "dark" ? <DarkExpress /> : <Express />}
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Express.js
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Nest />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Nest.js
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            {theme == "dark" ? <DarkSocket /> : <Socket />}
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Socket.js
+            </p>
           </div>
         </div>
 
-        <div>
-          <div className="flex flex-col items-center">
-            <Image src={React} width={64} height={64} />
-          </div>
-          <div className="flex flex-col items-center">
-            <Image src={Next} width={64} height={64} />
+        <div className="grid grid-cols-3 gap-[48px] lg:grid-cols-[32px] lg:flex lg:gap-[96px]">
+          <div className="flex flex-col gap-[8px] items-center">
+            <Image src={Postgresql} />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              PostgreSQL
+            </p>
           </div>
 
-          <div className="flex flex-col items-center">
-            <Image src={Tailwind} width={64} height={64} />
+          <div className="flex flex-col gap-[8px] items-center">
+            <MongoDB />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              MongoDB
+            </p>
           </div>
-        </div>
 
-        <div>
-          <div className="flex flex-col items-center text-pretty text-slate-500 w-8">
-            <Image src={Figma} width={64} height={64} />
-            <p>Figma</p>
+          <div className="flex flex-col gap-[8px] items-center">
+            <Sass />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Sass/Scss
+            </p>
           </div>
-          <div className="flex w-20 mb-3 ">
-            <Image src={Firebase} />
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Image src={Tailwind} />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Tailwindcss
+            </p>
           </div>
-          <div className="flex flex-col items-center  text-slate-500 w-10">
-            <Image src={Git} width={64} height={64} />
-            <p>git</p>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Figma />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Figma
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            {theme == "dark" ? <DarkCypress /> : <Cypress />}
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Sypress
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Storybook />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Storybook
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-[8px] items-center">
+            <Git />
+            <p className="font-extralight text-lg text-gray-600 dark:text-gray-300">
+              Git
+            </p>
           </div>
         </div>
       </section>

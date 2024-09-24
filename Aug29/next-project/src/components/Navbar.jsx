@@ -1,6 +1,6 @@
 // import React from "react";
 import Image from "next/image";
-import Logo from "../Icons/logo.png";
+import Logo from "../svg/Logo";
 import Link from "next/link";
 import Icon from "../Icons/Icon.png";
 import Icon1 from "../Icons/IconMenu.png";
@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className=" flex w-full h-[68px] justify-between px-[16px] py-[16px] items-center	lg:container lg:mx-auto lg:px-[32px] ">
       <div>
-        <p className="text-4xl text-gray-800 font-bold">Suvd</p>
+        <p className="text-4xl dark:text-white text-black font-bold">Suvd</p>
       </div>
       <div
         onClick={handleNav}
@@ -72,19 +72,29 @@ const Navbar = () => {
             </button>
           </div>
 
-          <button className="w-[136px] h-[36px] rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-[#111827] font-medium text-white  ">
-            Download CV
-          </button>
+          {theme == "dark" ? (
+            <button className="w-[136px] h-[36px] rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-white font-medium text-black  ">
+              Download CV
+            </button>
+          ) : (
+            <button className="w-[136px] h-[36px] rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-[#111827] font-medium text-white  ">
+              Download CV
+            </button>
+          )}
         </div>
       </div>
 
       <div
         className={
           menuOpen
-            ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+            ? "fixed left-0 top-0 w-[90%] sm:hidden h-screen dark:bg-black bg-[#ecf0f3] p-10 ease-in duration-500"
             : "fixed left-[100%] top-0 p-10 ease-in duration-500"
         }
       >
+        <p className="text-4xl dark:text-white  text-gray-800  font-bold">
+          Suvd
+        </p>
+
         <div className="flex w-full items-center justify-end">
           <div onClick={handleNav} className="cursor-pointer">
             <svg
@@ -105,7 +115,6 @@ const Navbar = () => {
         </div>
 
         <div className="">
-          <p className="text-4xl text-gray-800 font-bold">Suvd</p>
           <div className=" flex-col py-4">
             <div>
               {navLinks.map((item, index) => (
@@ -135,7 +144,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <button className="w-[180px] h-[36px] rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-[#111827] font-medium text-white mt-10 ">
+            <button className="w-[180px] h-[36px] rounded-xl pt-1.5 pr-1.5 pb-1.5 pl-1.5 bg-[#111827] font-medium text-white mt-10 dark:bg-white dark:text-black">
               Download CV
             </button>
           </div>
