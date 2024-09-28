@@ -71,7 +71,7 @@ const Contact = () => {
           <Image src={IconFooter} width={16} height={16} />
         )}
 
-        <p>2024 | Greetings with ❤️️ from Ulaanbaatar</p>
+        <p>2024 | Greetings with ❤️️ from Virginia</p>
       </div>
     </div>
   );
