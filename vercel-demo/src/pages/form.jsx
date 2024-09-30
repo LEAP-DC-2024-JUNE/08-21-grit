@@ -10,9 +10,10 @@ const Form = () => {
   const [state, setState] = useState("");
   const [postal, setPostal] = useState("");
   const [phone, setPhone] = useState("");
-  const [standard, setStandard] = useState("");
-  const [premium, setPremium] = useState("");
-  const [ultimate, setUltimate] = useState("");
+
+  // const [standard, setStandard] = useState("");
+  // const [premium, setPremium] = useState("");
+  // const [ultimate, setUltimate] = useState("");
 
   const handleLastName = (param1) => {
     setLastName(param1);
@@ -45,15 +46,20 @@ const Form = () => {
   const handlePhone = (param1) => {
     setPhone(param1);
   };
-  const handleStandard = (param1) => {
-    setStandard(param1);
+
+  const handleRadioInput = (param1) => {
+    setMembership(param1);
   };
-  const handlePremium = (param1) => {
-    setPremium(param1);
-  };
-  const handleUltimate = (param1) => {
-    setUltimate(param1);
-  };
+
+  // const handleStandard = (param1) => {
+  //   setStandard(param1);
+  // };
+  // const handlePremium = (param1) => {
+  //   setPremium(param1);
+  // };
+  // const handleUltimate = (param1) => {
+  //   setUltimate(param1);
+  // };
 
   const submitButton = () => {
     console.log(
@@ -163,19 +169,25 @@ const Form = () => {
           <div className="flex gap-2">
             <input
               type="radio"
-              onChange={(event) => handleStandard(event.target.value)}
+              name="membershipType"
+              value={"Standard"}
+              onChange={(event) => handleRadioInput(event.target.value)}
             />
-            <p>Standard</p>
+            <span>Standard</span>
             <input
               type="radio"
-              onChange={(event) => handlePremium(event.target.value)}
+              name="membershipType"
+              value={"Premium"}
+              onChange={(event) => handleRadioInput(event.target.value)}
             />
-            <p>Premium</p>
+            <span>Preimium</span>
             <input
               type="radio"
-              onChange={(event) => handleUltimate(event.target.value)}
+              name="membershipType"
+              value={"Classic"}
+              onChange={(event) => handleRadioInput(event.target.value)}
             />
-            <p>Ultimate</p>
+            <span>Classic</span>
           </div>
         </div>
       </div>

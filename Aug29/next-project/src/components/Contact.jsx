@@ -17,12 +17,12 @@ const Contact = () => {
   return (
     <div>
       <div className=" mt-24 flex flex-col items-center">
-        <button className="w-28 h-8 rounded-2xl bg-slate-300 font-normal text-black text-center dark:bg-[#374151]">
+        <button className="w-28 h-8 rounded-2xl bg-slate-300 font-normal text-black text-center dark:bg-[#CBD5E1]">
           Get in touch
         </button>
       </div>
       <div>
-        <p className="w-[576] mt-4 flex justify-center">
+        <p className="w-[576] mt-4 flex justify-center text-center">
           What’s next? Feel free to reach out to me if you're looking for a
           developer, have a query, or simply want to connect.
         </p>

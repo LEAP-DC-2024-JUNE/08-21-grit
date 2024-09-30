@@ -26,7 +26,7 @@ const Skills = () => {
     <div className=" w-full px-[16px] py-[64px]  lg:px-[80px] lg:py:[96px]  bg-[#ffffff] flex flex-col gap-[3px] dark:bg-[#030712] ">
       <div>
         <div className=" flex flex-col items-center ">
-          <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center dark:bg-[#374151]">
+          <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center dark:bg-[#CBD5E1]">
             Skills
           </button>
         </div>

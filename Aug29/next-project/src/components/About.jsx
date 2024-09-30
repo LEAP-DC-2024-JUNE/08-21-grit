@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="dark:bg-[#1F2937] bg-gray-50">
       <div className=" flex flex-col items-center ">
-        <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center mt-2 dark:bg-[#374151] ">
+        <button className="w-[105px] h-[28px] rounded-[12px] bg-[#E5E7EB] items-center font-normal text-black text-center mt-12 dark:bg-[#CBD5E1] ">
           About me
         </button>
       </div>
