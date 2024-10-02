@@ -1,13 +1,33 @@
-const BlogCard = ({ imgSrc, tag, title, username, date }) => {
+export const BlogCard = ({
+  imgSrc,
+  username,
+  title,
+  description,
+  tags,
+  date,
+}) => {
   return (
-    <div className="flex">
-      <Image src={imgSrc} width={300} height={300} />
-      <p>{tag}</p>
+    <div className="w-[350px]">
+      {
+        <img
+          src={imgSrc}
+          alt={title}
+          height={300}
+          className="border-2 w-full rounded-2xl"
+        />
+      }
+      {tags.map((tag) => {
+        return (
+          <span className="rounded-md bg-slate-200 text-sky-600 w-[57px] text-center gap-10">
+            {tags}
+          </span>
+        );
+      })}
+
       <h1>{title}</h1>
       <p>{username}</p>
-      <p>{date}</p>
+      <p>{description}</p>
+      <p className="font-normal text-base text-slate-500">{date}</p>
     </div>
   );
 };
-
-export default BlogCard;

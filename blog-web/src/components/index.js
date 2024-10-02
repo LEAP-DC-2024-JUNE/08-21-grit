@@ -3,3 +3,8 @@ export * from "./CarouselCard";
 export * from "./Footer";
 export * from "./Header";
 export * from "./TrendingCard";
+export * from "./BlogCard";
+export * from "./FooterIcons";
+export * from "./FooterLogo";
+export * from "./MetaLogo";
+export * from "./Search";
