@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Header = ({ setInputValue }) => {
   const router = useRouter();
   return (
-    <div className="pl-36 flex flex-col md:flex-row items-center justify-between my-10 italic hover:not-italic">
+    <div className="pl-36 flex flex-col md:flex-row items-center justify-between my-10 ">
       <div className="flex-shrink-0 mb-4 md:mb-0 ">
         <MetaLogo />
       </div>
@@ -14,21 +14,21 @@ export const Header = ({ setInputValue }) => {
       <div className="flex-grow flex justify-center mb-4 md:mb-0">
         <Link
           href="/"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
         >
           Home
         </Link>
 
         <Link
           href="/blog"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
         >
           Blog
         </Link>
 
         <Link
           href="/contact"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
         >
           Contact
         </Link>

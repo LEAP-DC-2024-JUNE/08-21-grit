@@ -21,16 +21,29 @@ const SinglePost = () => {
     <div>
       <Header />
 
-      <div>
-        <p>{SinglePost.user?.title}</p>
+      <div className="w-[800px] gap-8 px-20 mx-80 pt-10">
+        <p className="text-2xl font-bold">{singleArticle.title}</p>
+        <div className="flex font-extralight text-gray-500 gap-4 my-4 ">
+          <p>{singleArticle.user ? singleArticle.user.name : "Unknown User"}</p>
+          <p>{singleArticle.readable_publish_date}</p>
+        </div>
       </div>
-      <div>
-        <img
-          src={SinglePost.user?.profile_image_90}
-          alt=""
-          width={640}
-          height={640}
-        />
+      <div className="w-[800px] px-20 mx-80">
+        {singleArticle.user ? (
+          <img
+            src={singleArticle.user.profile_image_90}
+            alt=""
+            width={640}
+            height={640}
+          />
+        ) : (
+          <img
+            src="fallback-image-url.jpg"
+            alt="Fallback"
+            width={640}
+            height={640}
+          />
+        )}
       </div>
 
       <div
