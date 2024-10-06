@@ -42,7 +42,7 @@ export const BlogCardContainer = ({ inputValue }) => {
   return (
     <div>
       <p className="mt-20 pl-36 text-xl font-bold">All Blog Post</p>
-      <div className="italic hover:not-italic flex gap-10 pl-40 pt-10">
+      <div className=" flex gap-10 pl-40 pt-10">
         <span
           onClick={() => filteredCategory("all")}
           className="hover:text-gray-500 hover:cursor-pointer"
@@ -98,7 +98,7 @@ export const BlogCardContainer = ({ inputValue }) => {
         })}
         <button
           onClick={loadMore}
-          className=" mt-16 mr-40 border-2 rounded-lg border-color-[#696A754D] w-[96px] h-[40px] hover:border-gray-500 text-center items-center mb-20"
+          className="ml-[180px] mt-16 mr-40 border-2 rounded-lg border-color-[#696A754D] w-[96px] h-[40px] hover:border-gray-500 text-center items-center mb-20"
         >
           Load More
         </button>

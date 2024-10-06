@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className="bg-gray-200 px-10">
       <div className="px-16 flex justify-between">
-        <div className="w-[280px] text-gray-500 italic mt-10 ">
+        <div className="w-[280px] text-gray-500  mt-10 ">
           <p className="font-bold pb-2">About</p>
           <p className=" mb-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -16,27 +16,32 @@ export const Footer = () => {
           <p className="pt-1">Email : info@jstemplate.net</p>
           <p>Phone : 880 123 456 789</p>
         </div>
-        <div className="mt-10 text-gray-500 w-[50px] flex italic hover:not-italic ">
-          <Link
-            href="/"
-            className="px-4 hover:text-gray-500 hover:cursor-pointer"
-          >
-            Home
-          </Link>
+        <div className="mt-10 text-gray-500 w-[50px]  ">
+          <div>
+            <Link
+              href="/"
+              className="px-4 hover:text-gray-700 hover:cursor-pointer"
+            >
+              Home
+            </Link>
+          </div>
 
-          <Link
-            href="/blog"
-            className="px-4 hover:text-gray-500 hover:cursor-pointer"
-          >
-            Blog
-          </Link>
-
-          <Link
-            href="/contact-us"
-            className="px-4 hover:text-gray-500 hover:cursor-pointer"
-          >
-            Contact
-          </Link>
+          <div>
+            <Link
+              href="/blog"
+              className="px-4 hover:text-gray-700 hover:cursor-pointer"
+            >
+              Blog
+            </Link>
+          </div>
+          <div>
+            <Link
+              href="/contact-us"
+              className="px-4 hover:text-gray-700 hover:cursor-pointer"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
         <div className="mt-10">
           <FooterIcons />

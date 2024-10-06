@@ -64,7 +64,9 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

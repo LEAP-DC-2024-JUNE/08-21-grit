@@ -11,7 +11,7 @@ export const BlogCard = ({
 }) => {
   return (
     <Link href={{ pathname: "/blog/single-post", query: { selectedId: id } }}>
-      <div className="w-[392px] h-[510px]">
+      <div className="w-[392px] h-[510px] hover:cursor-pointer hover:bg-neutral-100">
         <div className="p-2">
           {
             <img
@@ -24,7 +24,7 @@ export const BlogCard = ({
           }
         </div>
         <div className="h-[240px] py-1 mt-2 p-2">
-          <span className="rounded-md bg-[#4B6BFB0D] text-[#4B6BFB] py-1  my-4 px-2.5 ">
+          <span className="rounded-md bg-[#4B6BFB0D] text-[#4B6BFB] hover:cursor-pointer hover:bg-slate-200 py-1  my-4 px-2.5 ">
             {tags}
           </span>
 

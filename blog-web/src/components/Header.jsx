@@ -14,21 +14,21 @@ export const Header = ({ setInputValue }) => {
       <div className="flex-grow flex justify-center mb-4 md:mb-0">
         <Link
           href="/"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer text-lg "
         >
           Home
         </Link>
 
         <Link
           href="/blog"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer text-lg "
         >
           Blog
         </Link>
 
         <Link
           href="/contact-us"
-          className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
+          className="px-4 hover:text-gray-500 hover:cursor-pointer text-lg"
         >
           Contact
         </Link>

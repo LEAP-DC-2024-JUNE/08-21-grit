@@ -3,7 +3,7 @@ export const CarouselCard = ({ article }) => {
     return null;
   }
   return (
-    <div className="w-full h-full px-40 justify-center relative">
+    <div className="w-full h-full px-40 justify-center relative mt-8">
       <img
         className="rounded-xl brightness-100"
         height={620}
