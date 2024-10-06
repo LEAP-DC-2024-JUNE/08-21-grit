@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
 
-export const TrendingCard = ({ imgSrc, tags, title }) => {
+export const TrendingCard = ({ imgSrc, tag_list, title }) => {
+  // Get the first tag from the tag_list
+  const firstTag =
+    Array.isArray(tag_list) && tag_list.length > 0 ? tag_list[0] : null;
   return (
-    <div className="relative w-[280px] h-[340px]">
+    <div className="relative w-[254px] h-[320px]   ">
       <img
         src={imgSrc}
         alt={title}
         height={300}
         className=" w-full h-full rounded-2xl"
       />
-      <div className="absolute bottom-0  bg-opacity-50 w-[260] text-white rounded-b-2xl px-2 mb-4 items-center">
+      <div className="absolute bottom-0  bg-opacity-50 w-[230px] text-white rounded-b-2xl px-2 mb-4 items-center backdrop-blur-sm">
         <div className="flex flex-wrap gap-1">
-          {tags.map((tag) => {
-            return (
-              <span className="rounded-md bg-slate-200 text-sky-600 text-center text-xs ">
-                {tags}
-              </span>
-            );
-          })}
+          {firstTag ? (
+            <span className="rounded-md bg-[#4B6BFB] text-white py-1 px-2.5 w-[100px]">
+              {firstTag}
+            </span>
+          ) : (
+            <span>No tags available</span>
+          )}
         </div>
         <h1 className="mt-2 text-sm text-wrap">{title}</h1>
       </div>
@@ -38,23 +41,17 @@ export const Trending = () => {
     fetchArticles();
   }, []);
 
-  if (cards.length === 0) {
-    return (
-      <div className="flex justify-center mt-44 mb-44">
-        <p className="text-2xl">Not found</p>
-      </div>
-    );
-  }
   return (
-    <div>
-      <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
+    <div className="mt-20">
+      <p className="text-xl font-bold pl-36 pb-2">Trending</p>
+      <div className="flex flex-wrap justify-center px-10 gap-10">
         {cards.map((card) => {
           return (
             <div className=" px-2 pt-2">
               <TrendingCard
                 imgSrc={card.social_image}
-                title={card.title}
-                tags={card.tag_list}
+                title_tag={card.title_tag}
+                tag_list={card.tag_list}
               />
             </div>
           );

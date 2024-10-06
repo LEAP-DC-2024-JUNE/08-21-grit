@@ -1,64 +1,55 @@
-// import {
-//   Header,
-//   Footer,
-//   CarouselCard,
-//   TrendingCard,
-//   BlogCard,
-// } from "../components";
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <Header />
-//       <BlogCard />
-//       <CarouselCard />
-//       <Footer />
-//       <TrendingCard />
-//     </div>
-//   );
-//
-
 import { BlogCardContainer, Trending } from "../components";
-import { Header } from "@/components/Header";
-import { Footer } from "../components/Footer";
-import { useState } from "react";
-import { CarouselCard } from "@/components";
+import { Header } from "../components";
+import { Footer } from "../components";
+import { CarouselCard } from "../components";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
+  const [articles, setArticles] = useState([]);
+  const [index, setIndex] = useState(0);
+
+  const fetchData = () => {
+    fetch(`https://dev.to/api/articles?state=fresh&per_page=5`)
+      .then((response) => response.json())
+      .then((data) => setArticles(data));
+  };
+
+  const handlePlus = () => {
+    setIndex((prevState) =>
+      prevState == articles.length - 1 ? 0 : prevState + 1
+    );
+  };
+
+  const handleMin = () => {
+    if (index == 0) {
+      setIndex(articles.length - 1);
+    } else {
+      setIndex(index - 1);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="bg-white text-black flex flex-col">
       <Header setInputValue={setInputValue} />
-      <CarouselCard />
+
+      <div>
+        <CarouselCard article={articles[index]} />
+        <button
+          onClick={() => handlePlus()}
+          className="border-2 w-10 h-10 ml-[1196px]"
+        >
+          +
+        </button>
+        <button onClick={() => handleMin()}>-</button>
+      </div>
       <Trending />
       <BlogCardContainer inputValue={inputValue} />
       <Footer />
     </div>
   );
 }
-
-// // import { useState } from "react";
-// // import { BlogCardContainer } from "@/components/BlogCardContainer";
-// // import { Header, Footer } from "@/components";
-
-// // export default function Home() {
-// //   const [inputValue, setInputValue] = useState("");
-// // const fetchData = () => {
-// //   fetch(`https://dev.to/api/articles?per_page=${count}`)
-// //     .then((response) => response.json())
-// //     .then((data) => setArticles(data));
-// // };
-// // const [count, setCount] = useState(9);
-// // useEffect(() => {
-// //   fetchData();
-// // }, [count]);
-// //   return (
-// //     <div>
-// //       {/* <Header setInputValue={setInputValue} /> */}
-// //       <BlogCardContainer inputValue={inputValue} />
-// //       {/* <CarouselCard /> */}
-// //       <Footer />
-// //       {/* <TrendingCard /> */}
-// //     </div>
-// //   );
-// // }
