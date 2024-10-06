@@ -27,7 +27,7 @@ export const Header = ({ setInputValue }) => {
         </Link>
 
         <Link
-          href="/contact"
+          href="/contact-us"
           className="px-4 hover:text-gray-500 hover:cursor-pointer italic hover:not-italic"
         >
           Contact

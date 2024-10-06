@@ -28,7 +28,7 @@ const SinglePost = () => {
           <p>{singleArticle.readable_publish_date}</p>
         </div>
       </div>
-      <div className="w-[800px] px-20 mx-80">
+      <div className="w-[800px] px-20 mx-80 gap-2">
         {singleArticle.user ? (
           <img
             src={singleArticle.user.profile_image_90}

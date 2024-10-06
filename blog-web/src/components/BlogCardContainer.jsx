@@ -44,7 +44,7 @@ export const BlogCardContainer = ({ inputValue }) => {
       <p className="mt-20 pl-36 text-xl font-bold">All Blog Post</p>
       <div className="italic hover:not-italic flex gap-10 pl-40 pt-10">
         <span
-          onClick={() => filteredCategory("/")}
+          onClick={() => filteredCategory("all")}
           className="hover:text-gray-500 hover:cursor-pointer"
         >
           All

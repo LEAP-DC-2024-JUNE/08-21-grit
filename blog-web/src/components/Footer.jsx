@@ -32,13 +32,13 @@ export const Footer = () => {
           </Link>
 
           <Link
-            href="/contact"
+            href="/contact-us"
             className="px-4 hover:text-gray-500 hover:cursor-pointer"
           >
             Contact
           </Link>
         </div>
-        <div className="mt-10 ">
+        <div className="mt-10">
           <FooterIcons />
         </div>
       </div>
