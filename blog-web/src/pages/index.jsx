@@ -1,3 +1,4 @@
+import { ArrowNext, ArrowPrev } from "@/components";
 import { BlogCardContainer, Trending } from "../components";
 import { Header } from "../components";
 import { Footer } from "../components";
@@ -39,13 +40,10 @@ export default function Home() {
 
       <div>
         <CarouselCard article={articles[index]} />
-        <button
-          onClick={() => handlePlus()}
-          className="border-2 w-10 h-10 ml-[1196px]"
-        >
-          +
-        </button>
-        <button onClick={() => handleMin()}>-</button>
+        <div className="pt-2 flex flex-row ml-[1200px] gap-2">
+          <ArrowNext next={handlePlus} />
+          <ArrowPrev prev={handleMin} />
+        </div>
       </div>
       <Trending />
       <BlogCardContainer inputValue={inputValue} />

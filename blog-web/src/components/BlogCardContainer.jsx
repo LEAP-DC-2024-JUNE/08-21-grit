@@ -38,6 +38,7 @@ export const BlogCardContainer = ({ inputValue }) => {
         <p className="text-2xl">Not found</p>
       </div>
     );
+
   return (
     <div>
       <p className="mt-20 pl-36 text-xl font-bold">All Blog Post</p>
@@ -79,16 +80,16 @@ export const BlogCardContainer = ({ inputValue }) => {
           Branding
         </span>
       </div>
-      <div className="flex flex-wrap justify-center mt-20 px-10 gap-10">
+      <div className="flex flex-wrap justify-center mt-20 px-10 gap-2 rounded-2xl">
         {filteredcards.map((card) => {
           return (
-            <div className="border-2 px-2 pt-2">
+            <div className="border-2 px-2 rounded-2xl border-gray-100 my-2 ">
               <BlogCard
                 imgSrc={card.social_image}
                 username={card.user.username}
                 title={card.title}
                 description={card.description}
-                tag_list={card.tag_list}
+                tags={card.type_of}
                 date={card.readable_publish_date}
                 id={card.id}
               />

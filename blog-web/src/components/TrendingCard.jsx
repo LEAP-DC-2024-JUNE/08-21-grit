@@ -8,11 +8,10 @@ export const TrendingCard = ({ imgSrc, tag_list, title }) => {
     <div className="relative w-[254px] h-[320px]   ">
       <img
         src={imgSrc}
-        alt={title}
         height={300}
-        className=" w-full h-full rounded-2xl"
+        className=" w-full h-full rounded-2xl brightness-100"
       />
-      <div className="absolute bottom-0  bg-opacity-50 w-[230px] text-white rounded-b-2xl px-2 mb-4 items-center backdrop-blur-sm">
+      <div className="absolute bottom-0  bg-opacity-50 h-[110px] w-full text-white rounded-b-2xl px-2 items-center backdrop-blur-sm">
         <div className="flex flex-wrap gap-1">
           {firstTag ? (
             <span className="rounded-md bg-[#4B6BFB] text-white py-1 px-2.5 w-[100px]">
@@ -22,7 +21,7 @@ export const TrendingCard = ({ imgSrc, tag_list, title }) => {
             <span>No tags available</span>
           )}
         </div>
-        <h1 className="mt-2 text-sm text-wrap">{title}</h1>
+        <h1 className="mt-2 text-sm text-wrap mb-1">{title}</h1>
       </div>
     </div>
   );
@@ -50,7 +49,7 @@ export const Trending = () => {
             <div className=" px-2 pt-2">
               <TrendingCard
                 imgSrc={card.social_image}
-                title_tag={card.title_tag}
+                title={card.title}
                 tag_list={card.tag_list}
               />
             </div>

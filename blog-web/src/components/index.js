@@ -8,3 +8,5 @@ export * from "./FooterIcons";
 export * from "./FooterLogo";
 export * from "./MetaLogo";
 export * from "./Search";
+export * from "./ArrowNext";
+export * from "./ArrowPrev";
